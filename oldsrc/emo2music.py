@@ -83,5 +83,5 @@ def text_to_music(text, output_file=None):
     print(f"\n Music settings -> Tempo: {tempo} | Key: {key} {scale} | Instrument: {instrument} | Velocity: {velocity}")
     generate_midi(tempo, key, scale, instrument, velocity, output_file)
 
-text_inputs = "I’m heartbroken, but also strangely hopeful that things will get better someday."
-text_to_music(text_inputs, output_file='media/output.mid')
+# text_inputs = "I’m heartbroken, but also strangely hopeful that things will get better someday."
+# text_to_music(text_inputs, output_file='media/output.mid')

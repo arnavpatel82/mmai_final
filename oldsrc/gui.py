@@ -1,4 +1,5 @@
 import tkinter as tk
+from emo2music import *
 
 def main():
     # Create the main window
@@ -15,7 +16,13 @@ def main():
     text_entry.pack(pady=10)
 
     # Button
-    compose_button = tk.Button(window, text="Compose Music", command=lambda: print("Button clicked!"))
+    def compose_music():
+        user_text = text_entry.get()
+        if user_text.strip():
+            text_to_music(user_text, output_file="media/output.mid")
+            print("Music generated and saved to media/output.mid!")
+
+    compose_button = tk.Button(window, text="Compose Music", command=compose_music)
     compose_button.pack(pady=20)
 
     # Start the GUI event loop
